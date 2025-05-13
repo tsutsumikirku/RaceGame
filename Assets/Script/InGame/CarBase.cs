@@ -18,7 +18,7 @@ public class CarBase
     private bool isHandbrake;
     public CarBase(CarData carData)
     {
-
+        
     }
     public void ManualUpdate()
     {
