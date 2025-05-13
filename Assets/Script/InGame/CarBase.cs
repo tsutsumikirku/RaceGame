@@ -2,20 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarBase : MonoBehaviour
+public class CarBase
 {
-    [SerializeField] private WheelCollider frontLeftWheel;
-    [SerializeField] private WheelCollider frontRightWheel;
-    [SerializeField] private WheelCollider rearLeftWheel;
-    [SerializeField] private WheelCollider rearRightWheel;
-    [SerializeField] private float motorForce = 1500f;
-    [SerializeField] private float brakeForce = 3000f;
-    [SerializeField] private float maxSteerAngle = 30f;
+    //Wheel Colliders
+    private WheelCollider frontLeftWheel;
+    private WheelCollider frontRightWheel;
+    private WheelCollider rearLeftWheel;
+    private WheelCollider rearRightWheel;
+    private float motorForce = 1500f;
+    private float brakeForce = 3000f;
+    private float maxSteerAngle = 30f;
     private float currentSteerAngle;
     private float currentBrakeForce;
     private bool isBraking;
     private bool isHandbrake;
-    private void FixedUpdate()
+    public CarBase(CarData carData)
+    {
+
+    }
+    public void ManualUpdate()
     {
         HandleMotor();
         HandleSteering();
@@ -37,9 +42,10 @@ public class CarBase : MonoBehaviour
     {
         frontLeftWheel.brakeTorque = currentBrakeForce;
         frontRightWheel.brakeTorque = currentBrakeForce;
-        if(!isHandbrake){
-        rearLeftWheel.brakeTorque = currentBrakeForce;
-        rearRightWheel.brakeTorque = currentBrakeForce;
+        if (!isHandbrake)
+        {
+            rearLeftWheel.brakeTorque = currentBrakeForce;
+            rearRightWheel.brakeTorque = currentBrakeForce;
         }
     }
 
