@@ -449,6 +449,12 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
+--- !u!146 &157835212 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 2224504295629868306, guid: d002c6eb13f175c4cbd931edacdcbc62,
+    type: 3}
+  m_PrefabInstance: {fileID: 1853425861}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &222602690
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,6 +806,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 618421764}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!146 &771160969 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 6121060590160577495, guid: d002c6eb13f175c4cbd931edacdcbc62,
+    type: 3}
+  m_PrefabInstance: {fileID: 1853425861}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &989475404 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4889781194041225851, guid: d002c6eb13f175c4cbd931edacdcbc62,
@@ -818,8 +830,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7da93d311bb6f54f939b4191e807688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _carData: {fileID: 11400000, guid: 5e44250dcd6217342b1282a6826fcf05, type: 2}
-  _characterAnimator: {fileID: 0}
+  _frontLeftWheel: {fileID: 1152188467}
+  _frontRightWheel: {fileID: 771160969}
+  _rearLeftWheel: {fileID: 1894016171}
+  _rearRightWheel: {fileID: 157835212}
+  _carData: {fileID: 11400000, guid: 6ed58f657795b7a4e98223411d60a466, type: 2}
+--- !u!146 &1152188467 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 5180772385079228729, guid: d002c6eb13f175c4cbd931edacdcbc62,
+    type: 3}
+  m_PrefabInstance: {fileID: 1853425861}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1853425861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -941,6 +962,12 @@ PrefabInstance:
 --- !u!4 &1853425862 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6836271870270858683, guid: d002c6eb13f175c4cbd931edacdcbc62,
+    type: 3}
+  m_PrefabInstance: {fileID: 1853425861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!146 &1894016171 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 2496243720576377464, guid: d002c6eb13f175c4cbd931edacdcbc62,
     type: 3}
   m_PrefabInstance: {fileID: 1853425861}
   m_PrefabAsset: {fileID: 0}

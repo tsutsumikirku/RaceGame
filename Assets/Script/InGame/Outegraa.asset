@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e82a847d788704d45bf856b6f0938cfd, type: 3}
   m_Name: Outegraa
   m_EditorClassIdentifier: 
+  _motorForce: 1500
+  _brakeForce: 3000
+  _maxSteerAngle: 30
