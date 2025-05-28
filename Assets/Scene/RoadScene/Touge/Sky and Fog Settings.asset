@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   enable:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   localClouds:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   earthCurvature:
     m_OverrideState: 0
     m_Value: 0
@@ -29,10 +29,10 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: {x: 0, y: 0}
   bottomAltitude:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1200
   altitudeRange:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 2000
   fadeInMode:
     m_OverrideState: 0
@@ -58,10 +58,10 @@ MonoBehaviour:
     m_Value: {fileID: 0}
     dimension: 2
   cloudControl:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   m_CloudPreset:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   cumulusMap:
     m_OverrideState: 0
@@ -92,7 +92,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 64
   densityCurve:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
       serializedVersion: 2
       m_Curve:
@@ -127,7 +127,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   erosionCurve:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
       serializedVersion: 2
       m_Curve:
@@ -162,7 +162,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   ambientOcclusionCurve:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
       serializedVersion: 2
       m_Curve:
@@ -197,7 +197,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   scatteringTint:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {r: 0, g: 0, b: 0, a: 1}
   powderEffectIntensity:
     m_OverrideState: 0
@@ -206,25 +206,25 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0.5
   densityMultiplier:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.4
   shapeFactor:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.9
   shapeScale:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 5
   shapeOffset:
     m_OverrideState: 0
     m_Value: {x: 0, y: 0, z: 0}
   erosionFactor:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.8
   erosionScale:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 107
   erosionNoiseType:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   ambientLightProbeDimmer:
     m_OverrideState: 0
