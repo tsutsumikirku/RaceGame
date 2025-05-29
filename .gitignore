@@ -75,3 +75,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 Assets/Model/
 Assets/WorldMaterialsFree/
+Assets/EasyRoads3D/
+Assets/EasyRoads3D scenes/
