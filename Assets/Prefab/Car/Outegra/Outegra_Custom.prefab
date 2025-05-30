@@ -883,7 +883,6 @@ GameObject:
   - component: {fileID: 6204876721692067230}
   - component: {fileID: 585146809742479706}
   - component: {fileID: 8916208310791089297}
-  - component: {fileID: 4830599562955011711}
   m_Layer: 0
   m_Name: Outegra_Custom
   m_TagString: Untagged
@@ -964,27 +963,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &4830599562955011711
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4889781194041225851}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.2, y: 1.83, z: 7.95}
-  m_Center: {x: 0, y: 1.45, z: 0}
 --- !u!1 &5794172418953346915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1764,6 +1742,7 @@ GameObject:
   - component: {fileID: 8182334828115050000}
   - component: {fileID: 848209588930726958}
   - component: {fileID: 1273884780375402862}
+  - component: {fileID: 8725424509083990202}
   m_Layer: 0
   m_Name: Outegra_Custom_Body
   m_TagString: Untagged
@@ -1838,3 +1817,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8725424509083990202
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9055943659530525015}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5196573931819520135, guid: 133665591c328a64d8d7a010b0d368c1, type: 3}
