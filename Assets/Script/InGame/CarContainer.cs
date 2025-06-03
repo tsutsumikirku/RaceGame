@@ -19,8 +19,5 @@ public class CarContainer : MonoBehaviour
             (_frontLeftWheel, _frontRightWheel, _rearLeftWheel, _rearRightWheel
         ));
     }
-    void Update()
-    {
-        _carBase.ManualUpdate();
-    }   
+    void Update()=>_carBase.ManualUpdate();
 }

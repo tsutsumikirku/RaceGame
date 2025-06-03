@@ -31,10 +31,6 @@ public class CarBase
         float verticalInput = Input.GetAxis("Vertical");
         _isBraking = Input.GetKey(KeyCode.Space);
         _isHandbrake = Input.GetKey("b");
-        _frontLeftWheel.motorTorque = verticalInput * _carData.MotorForce;
-        _frontRightWheel.motorTorque = verticalInput * _carData.MotorForce;
-        _rearLeftWheel.motorTorque = verticalInput * _carData.MotorForce;
-        _rearRightWheel.motorTorque = verticalInput * _carData.MotorForce;
         _currentBrakeForce = _isBraking || _isHandbrake ? _carData.BrakeForce : 0f;
         ApplyBraking();
     }
