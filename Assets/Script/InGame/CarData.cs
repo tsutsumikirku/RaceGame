@@ -24,11 +24,18 @@ public class CarData : ScriptableObject
     [SerializeField, Header("効率")] float _efficiency = 0.95f;
     [SerializeField, Header("ブレーキの力（N·m）")] float _brakeForce = 3000f;
     [SerializeField, Header("最大ステア角（度）")] float _maxSteerAngle = 30f;
-
+    [SerializeField, Header("駆動方式")] DriveType _driveType = DriveType.RearWheelDrive;
     public AnimationCurve EnginePerformanceCurve { get => _enginePerformanceCurve; }
     public float[] GearRatios { get => _gearRatios; }
     public float FinalDriveRatio { get => _finalDriveRatio; }
     public float Efficiency { get => _efficiency; }
     public float BrakeForce { get => _brakeForce; }
     public float MaxSteerAngle { get => _maxSteerAngle; }
+    public DriveType DriveType { get => _driveType; }
+}
+public enum DriveType
+{
+    FrontWheelDrive,
+    RearWheelDrive,
+    AllWheelDrive
 }
