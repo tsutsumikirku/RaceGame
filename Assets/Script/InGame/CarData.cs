@@ -7,8 +7,8 @@ public class CarData : ScriptableObject
     [SerializeField, Header("エンジン性能表")]
     AnimationCurve _enginePerformanceCurve = new AnimationCurve(
         new Keyframe(0f, 0f),
-        new Keyframe(8000f, 165f),
-        new Keyframe(8100f, 160f)
+        new Keyframe(7000f, 206f),
+        new Keyframe(8000f, 162f)
     );
     [SerializeField, Header("ギア比表")]
     float[] _gearRatios = new float[]
