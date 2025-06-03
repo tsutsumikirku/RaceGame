@@ -56,3 +56,4 @@ MonoBehaviour:
   _efficiency: 0.95
   _brakeForce: 3000
   _maxSteerAngle: 30
+  _driveType: 1
