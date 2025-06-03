@@ -28,24 +28,8 @@ public class CarBase
     }
     private void HandleMotor()
     {
-        float verticalInput = Input.GetAxis("Vertical");
-        _isBraking = Input.GetKey(KeyCode.Space);
-        _isHandbrake = Input.GetKey("b");
-        _currentBrakeForce = _isBraking || _isHandbrake ? _carData.BrakeForce : 0f;
-        ApplyBraking();
+        
     }
-
-    private void ApplyBraking()
-    {
-        _frontLeftWheel.brakeTorque = _currentBrakeForce;
-        _frontRightWheel.brakeTorque = _currentBrakeForce;
-        if (!_isHandbrake)
-        {
-            _rearLeftWheel.brakeTorque = _currentBrakeForce;
-            _rearRightWheel.brakeTorque = _currentBrakeForce;
-        }
-    }
-
     private void HandleSteering()
     {
         float horizontalInput = Input.GetAxis("Horizontal");

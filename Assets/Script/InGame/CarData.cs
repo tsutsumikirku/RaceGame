@@ -4,20 +4,31 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "CarData", menuName = "ScriptableObjects/CarData", order = 1)]
 public class CarData : ScriptableObject
 {
-    [SerializeField,Header("エンジン性能表 () ")]public AnimationCurve EnginePerformanceCurve = new AnimationCurve(
-        
+    [SerializeField, Header("エンジン性能表")]
+    AnimationCurve _enginePerformanceCurve = new AnimationCurve(
+        new Keyframe(0f, 0f),
+        new Keyframe(8000f, 165f),
+        new Keyframe(8100f, 160f)
     );
-    [SerializeField,Header("ギア比表")]public float[] GearRatios = new float[]
+    [SerializeField, Header("ギア比表")]
+    float[] _gearRatios = new float[]
     {
-        3.5f, // ギア1
-        2.0f, // ギア2
-        1.5f, // ギア3
-        1.0f, // ギア4
-        0.8f, // ギア5
-        0.7f  // ギア6
+        3.5f,
+        2.0f,
+        1.5f,
+        1.0f,
+        0.8f,
+        0.7f
     };
-    [SerializeField, Header("ファイナルギア比")]public float FinalDriveRatio = 3.9f;
-    [SerializeField, Header("ギア比効率")]public float GearEfficiency = 0.95f; 
-    [SerializeField, Header("ブレーキの力（N·m）")] public float BrakeForce = 3000f;
-    [SerializeField,Header("最大ステア角（度）")] public float MaxSteerAngle = 30f;
+    [SerializeField, Header("ファイナルギア比")] float _finalDriveRatio = 3.9f;
+    [SerializeField, Header("効率")] float _efficiency = 0.95f;
+    [SerializeField, Header("ブレーキの力（N·m）")] float _brakeForce = 3000f;
+    [SerializeField, Header("最大ステア角（度）")] float _maxSteerAngle = 30f;
+
+    public AnimationCurve EnginePerformanceCurve { get => _enginePerformanceCurve; }
+    public float[] GearRatios { get => _gearRatios; }
+    public float FinalDriveRatio { get => _finalDriveRatio; }
+    public float Efficiency { get => _efficiency; }
+    public float BrakeForce { get => _brakeForce; }
+    public float MaxSteerAngle { get => _maxSteerAngle; }
 }
