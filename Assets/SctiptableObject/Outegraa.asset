@@ -55,5 +55,5 @@ MonoBehaviour:
   _finalDriveRatio: 3.9
   _efficiency: 0.95
   _brakeForce: 3000
-  _maxSteerAngle: 30
+  _maxSteerAngle: 50
   _driveType: 1

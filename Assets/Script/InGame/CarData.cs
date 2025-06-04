@@ -10,9 +10,11 @@ public class CarData : ScriptableObject
         new Keyframe(7000f, 206f),
         new Keyframe(8000f, 162f)
     );
-    [SerializeField, Header("ギア比表")]
+    [SerializeField, Header("ギア比表  ギア0はリバース、ギア1はニュートラル")]
     float[] _gearRatios = new float[]
     {
+        -3.5f, // ギア0はリバース
+        0.0f, // ギア1はニュートラル
         3.5f,
         2.0f,
         1.5f,
