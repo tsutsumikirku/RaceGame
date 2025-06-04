@@ -1,6 +1,4 @@
-using System.Reflection;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class CarBase
 {
@@ -54,6 +52,7 @@ public class CarBase
         _accel = Input.GetAxis("Vertical");
         _rpm = _accel * _carData.EnginePerformanceCurve.keys[_carData.EnginePerformanceCurve.length - 1].time;
         float motorTorque = _carData.EnginePerformanceCurve.Evaluate(_rpm) * _carData.GearRatios[_currentGear + 1] * _carData.FinalDriveRatio * _carData.Efficiency;
+        Debug.Log($"RPM: {_rpm}, Motor Torque: {motorTorque}, Current Gear: {_currentGear}");
         switch (_carData.DriveType)
         {
             case DriveType.AllWheelDrive:
@@ -82,14 +81,7 @@ public class CarBase
             _frontRightWheel.brakeTorque = brakeForce;
             _rearLeftWheel.brakeTorque = brakeForce;
             _rearRightWheel.brakeTorque = brakeForce;
-        }
-        else
-        {
-            // ブレーキを解除
-            _frontLeftWheel.brakeTorque = 0f;
-            _frontRightWheel.brakeTorque = 0f;
-            _rearLeftWheel.brakeTorque = 0f;
-            _rearRightWheel.brakeTorque = 0f;
+            return;
         }
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -97,13 +89,13 @@ public class CarBase
             // ブレーキを適用
             _rearLeftWheel.brakeTorque = brakeForce;
             _rearRightWheel.brakeTorque = brakeForce;
+            return;
         }
-        else
-        {
-            // ブレーキを解除
-            _rearLeftWheel.brakeTorque = 0f;
-            _rearRightWheel.brakeTorque = 0f;
-        }
+        // ブレーキを解除
+        _frontLeftWheel.brakeTorque = 0f;
+        _frontRightWheel.brakeTorque = 0f;
+        _rearLeftWheel.brakeTorque = 0f;
+        _rearRightWheel.brakeTorque = 0f;
     }
     private void HandleSteering()
     {

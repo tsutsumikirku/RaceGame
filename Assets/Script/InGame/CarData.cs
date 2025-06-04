@@ -1,16 +1,16 @@
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "CarData", menuName = "ScriptableObjects/CarData", order = 1)]
 public class CarData : ScriptableObject
 {
+    // フィールド
     [SerializeField, Header("エンジン性能表")]
     AnimationCurve _enginePerformanceCurve = new AnimationCurve(
         new Keyframe(0f, 0f),
         new Keyframe(7000f, 206f),
         new Keyframe(8000f, 162f)
     );
-    [SerializeField, Header("ギア比表  ギア0はリバース、ギア1はニュートラル")]
+    [SerializeField, Header("ギア比")]
     float[] _gearRatios = new float[]
     {
         -3.5f, // ギア0はリバース
@@ -27,6 +27,8 @@ public class CarData : ScriptableObject
     [SerializeField, Header("ブレーキの力（N·m）")] float _brakeForce = 3000f;
     [SerializeField, Header("最大ステア角（度）")] float _maxSteerAngle = 30f;
     [SerializeField, Header("駆動方式")] DriveType _driveType = DriveType.RearWheelDrive;
+    [SerializeField,Header("エンジンの燃焼効率")]float _engineBurnEfficiency = 85f;
+    // プロパティ
     public AnimationCurve EnginePerformanceCurve { get => _enginePerformanceCurve; }
     public float[] GearRatios { get => _gearRatios; }
     public float FinalDriveRatio { get => _finalDriveRatio; }
